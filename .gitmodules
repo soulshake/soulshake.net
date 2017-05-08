@@ -1,0 +1,9 @@
+[submodule "www.soulshake.net"]
+	path = www.soulshake.net
+	url = git@github.com:soulshake/www.soulshake.net.git
+[submodule "cv.soulshake.net"]
+	path = cv.soulshake.net
+	url = git@github.com:soulshake/cv.soulshake.net.git
+[submodule "blog.soulshake.net"]
+	path = blog.soulshake.net
+	url = git@github.com:soulshake/blog.soulshake.net.git
