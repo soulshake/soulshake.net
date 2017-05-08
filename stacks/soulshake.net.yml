@@ -1,10 +1,6 @@
 version: "3"
 
 services:
-  registry:
-    image: registry:2
-    ports:
-      - "5000:5000"
 
   aiguillage:
     image: 'soulshake/aiguillage:latest'
@@ -13,6 +9,7 @@ services:
       - "443:443"
 
   blog:
+    build: blog.soulshake.net
     image: ${REGISTRY-127.0.0.1:5000}/blog.soulshake.net:${TAG-latest}
     deploy:
       mode: global
@@ -21,6 +18,7 @@ services:
     - "443"
 
   cv:
+    build: cv.soulshake.net
     image: ${REGISTRY-127.0.0.1:5000}/cv.soulshake.net:${TAG-latest}
     deploy:
       mode: global
@@ -28,6 +26,7 @@ services:
     - "80"
 
   www:
+    build: www.soulshake.net
     image: ${REGISTRY-127.0.0.1:5000}/www.soulshake.net:${TAG-latest}
     deploy:
       mode: global
