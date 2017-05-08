@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  registry:
+    image: registry:2
+    ports:
+      - "5000:5000"
+
+  aiguillage:
+    image: 'soulshake/aiguillage:latest'
+    ports:
+      - "80:80"
+      - "443:443"
+
+  blog:
+    image: ${REGISTRY-127.0.0.1:5000}/blog.soulshake.net:${TAG-latest}
+    deploy:
+      mode: global
+    ports:
+    - "80"
+    - "443"
+
+  cv:
+    image: ${REGISTRY-127.0.0.1:5000}/cv.soulshake.net:${TAG-latest}
+    deploy:
+      mode: global
+    ports:
+    - "80"
+
+  www:
+    image: ${REGISTRY-127.0.0.1:5000}/www.soulshake.net:${TAG-latest}
+    deploy:
+      mode: global
+    ports:
+    - "80"
+    - "443"
+
+# overlay network
