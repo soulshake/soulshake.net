@@ -16,6 +16,11 @@ services:
     ports:
     - "80"
     - "443"
+    command: bin/hugo
+    environment:
+      - DEVELOPMENT
+      - HUGO_BASEURL
+
 
   cv:
     build: cv.soulshake.net
@@ -24,6 +29,10 @@ services:
       mode: global
     ports:
     - "80"
+    environment:
+      PORT: "80"
+    command: /src/bin/wopr
+
 
   www:
     build: www.soulshake.net
@@ -33,5 +42,6 @@ services:
     ports:
     - "80"
     - "443"
+    command: bin/web
 
 # overlay network
