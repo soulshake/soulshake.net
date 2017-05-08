@@ -3,6 +3,7 @@ version: "3"
 services:
 
   aiguillage:
+    build: aiguillage
     image: ${REGISTRY-127.0.0.1:5000}/aiguillage:${TAG-latest}
     ports:
       - "80:80"
