@@ -3,7 +3,7 @@ version: "3"
 services:
 
   aiguillage:
-    image: 'soulshake/aiguillage:latest'
+    image: ${REGISTRY-127.0.0.1:5000}/aiguillage:${TAG-latest}
     ports:
       - "80:80"
       - "443:443"

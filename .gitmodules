@@ -7,3 +7,6 @@
 [submodule "blog.soulshake.net"]
 	path = stacks/blog.soulshake.net
 	url = git@github.com:soulshake/blog.soulshake.net.git
+[submodule "stacks/aiguillage"]
+	path = stacks/aiguillage
+	url = git@github.com:soulshake/aiguillage.git
