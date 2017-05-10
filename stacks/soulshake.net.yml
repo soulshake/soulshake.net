@@ -22,7 +22,6 @@ services:
       - DEVELOPMENT
       - HUGO_BASEURL
 
-
   cv:
     build: cv.soulshake.net
     image: ${REGISTRY-127.0.0.1:5000}/cv.soulshake.net:${TAG-latest}
@@ -34,7 +33,6 @@ services:
       PORT: "80"
     command: /src/bin/wopr
 
-
   www:
     build: www.soulshake.net
     image: ${REGISTRY-127.0.0.1:5000}/www.soulshake.net:${TAG-latest}
@@ -44,5 +42,3 @@ services:
     - "80"
     - "443"
     command: bin/web
-
-# overlay network
