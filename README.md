@@ -19,4 +19,10 @@ This stack contains the bits and pieces needed to deploy several of my personal 
 
     $ docker-compose -f stacks/soulshake.net.yml build
     $ docker-compose -f stacks/soulshake.net.yml push
-    $ docker stack deploy soulshake --compose-file stacks/soulshake.net.yml 
+    $ docker stack deploy soulshake --compose-file stacks/soulshake.net.yml
+
+## Update an image
+
+```
+docker service update --image soulshake/cv.soulshake.net:2022-01-02 soulshake_cv
+```
